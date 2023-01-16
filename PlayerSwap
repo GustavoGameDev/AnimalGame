@@ -1,0 +1,40 @@
+public class PlayerSwap : MonoBehaviour
+{
+
+    
+
+    public GameObject player;
+    public GameObject bear;
+    public GameObject spider;
+   
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            player.gameObject.SetActive(false);
+            bear.gameObject.SetActive(true);
+            spider.gameObject.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            player.gameObject.SetActive(false);
+            bear.gameObject.SetActive(false);
+            spider.gameObject.SetActive(true);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            player.gameObject.SetActive(true);
+            bear.gameObject.SetActive(false);
+            spider.gameObject.SetActive(false);
+        }
+    }
+}
